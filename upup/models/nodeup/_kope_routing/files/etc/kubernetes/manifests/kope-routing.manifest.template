@@ -12,7 +12,7 @@ spec:
     command:
     - /bin/sh
     - -c
-#    - /usr/bin/route-controller --boot-id=/var/lib/kope-routing/boot-id --kubeconfig=/var/lib/kope-routing/kubeconfig --healthz-port=10247 1>>/var/log/kope-routing.log 2>&1
+#    - /usr/bin/route-controller --boot-id=/var/lib/kope-routing/boot-id --kubeconfig=/var/lib/kope-routing/kubeconfig --healthz-port=10247
     - /usr/bin/route-controller --provider=gre --boot-id=/var/lib/kope-routing/boot-id --kubeconfig=/var/lib/kope-routing/kubeconfig --healthz-port=10247
     securityContext:
       privileged: true

@@ -22,7 +22,7 @@
     "command": [
               "/bin/sh",
               "-c",
-              "/usr/local/bin/etcd --listen-peer-urls http://127.0.0.1:2381 --addr 127.0.0.1:4002 --bind-addr 127.0.0.1:4002 --data-dir /var/etcd/data-events 1>>/var/log/etcd-events.log 2>&1"
+              "/usr/local/bin/etcd --listen-peer-urls http://127.0.0.1:2381 --addr 127.0.0.1:4002 --bind-addr 127.0.0.1:4002 --data-dir /var/etcd/data-events"
             ],
     "livenessProbe": {
       "httpGet": {
