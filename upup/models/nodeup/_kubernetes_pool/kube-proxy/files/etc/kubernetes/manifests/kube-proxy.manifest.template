@@ -17,7 +17,7 @@ spec:
     command:
     - /bin/sh
     - -c
-    - kube-proxy --kubeconfig=/var/lib/kube-proxy/kubeconfig --resource-container="" {{ BuildFlags KubeProxy }} 1>>/var/log/kube-proxy.log 2>&1
+    - kube-proxy --kubeconfig=/var/lib/kube-proxy/kubeconfig --resource-container="" {{ BuildFlags KubeProxy }}
     securityContext:
       privileged: true
     volumeMounts:
