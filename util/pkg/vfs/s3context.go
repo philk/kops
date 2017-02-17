@@ -18,6 +18,7 @@ package vfs
 
 import (
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
@@ -50,7 +51,10 @@ func (s *S3Context) getClient(region string) (*s3.S3, error) {
 		config := aws.NewConfig().WithRegion(region)
 		config = config.WithCredentialsChainVerboseErrors(true)
 
-		session := session.New()
+		session, err := session.NewSession(config)
+		if err != nil {
+			return nil, err
+		}
 		s3Client = s3.New(session, config)
 	}
 
